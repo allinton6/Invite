@@ -1,5 +1,5 @@
-## To my Girlfriend Kai Yi
 <!DOCTYPE html>
+## To my Girlfriend Kai Yi
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -39,22 +39,6 @@
         .btn:hover {
             background-color: #ff5f78;
         }
-
-        /* Styling the back button */
-        .back-btn {
-            background-color: #c1c1c1;
-            color: black;
-            padding: 10px 20px;
-            margin: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .back-btn:hover {
-            background-color: #9e9e9e;
-        }
     </style>
 </head>
 <body>
@@ -68,9 +52,6 @@
 
         <!-- No Button -->
         <button class="btn" onclick="answer('NO,FUCK YOU BITCH')">No, fuck you!</button>
-
-        <!-- Back Button -->
-        <button class="back-btn" onclick="goBack()">Go Back</button>
     </div>
 
     <script>
@@ -110,11 +91,6 @@
                     <h2>GO FUCK YOURSELF BITCH</h2>
                 `;
             }
-        }
-
-        // Go back to the previous page
-        function goBack() {
-            window.history.back();
         }
     </script>
 
