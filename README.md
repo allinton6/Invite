@@ -48,10 +48,10 @@
         <h2 id="question">Do you want to be my VALENTINE BB??</h2>
 
         <!-- Yes Button -->
-        <button class="btn" onclick="answer('YESSS OFC')">Yes</button>
+        <button class="btn" onclick="answer('YESSS OFC')">YESSS OFC</button>
 
         <!-- No Button -->
-        <button class="btn" onclick="answer('NO,FUCK YOU BITCH')">No</button>
+        <button class="btn" onclick="answer('NO,FUCK YOU BITCH')">NO,FUCK YOU BITCH</button>
     </div>
 
     <script>
@@ -60,19 +60,19 @@
             // Access the question container and update it dynamically
             const questionContainer = document.getElementById("question-container");
 
-            // If they answered "Yes"
+            // If they answered "YESSS OFC"
             if (response === 'YESSS OFC') {
                 questionContainer.innerHTML = `
                     <h2>!YAY!</h2>
                     <p>I LOVE YOU!</p>
                 `;
             } 
-            // If they answered "No", ask if they like tea
+            // If they answered "NO,FUCK YOU BITCH", ask if they like tea
             else if (response === 'NO,FUCK YOU BITCH') {
                 questionContainer.innerHTML = `
                     <h2>PLEASEEEE BE MY VALENTINE</h2>
-                    <button class="btn" onclick="answerTea('FINE,ONLY CAUSE U CUTE')">Yes</button>
-                    <button class="btn" onclick="answerTea('I SAID NO ALREADY U BITCH')">No</button>
+                    <button class="btn" onclick="answerTea('FINE,ONLY CAUSE U CUTE')">FINE,ONLY CAUSE U CUTE</button>
+                    <button class="btn" onclick="answerTea('I SAID NO ALREADY U BITCH')">I SAID NO ALREADY U BITCH</button>
                 `;
             }
         }
