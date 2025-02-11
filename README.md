@@ -1,5 +1,5 @@
-## To my Girlfriend Kai yi
-
+<!DOCTYPE html>
+## To my Girlfriend Kai Yi
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -48,10 +48,10 @@
         <h2 id="question">Do you want to be my VALENTINE BB??</h2>
 
         <!-- Yes Button -->
-        <button class="btn" onclick="answer('yes')">Yes</button>
+        <button class="btn" onclick="answer('YESSS OFC')">Yes</button>
 
         <!-- No Button -->
-        <button class="btn" onclick="answer('no')">No</button>
+        <button class="btn" onclick="answer('NO,FUCK YOU BITCH')">No</button>
     </div>
 
     <script>
@@ -60,19 +60,19 @@
             // Access the question container and update it dynamically
             const questionContainer = document.getElementById("question-container");
 
-            // If they answered "Yes", display a loving message
-            if (response === 'yes') {
+            // If they answered "Yes"
+            if (response === 'YESSS OFC') {
                 questionContainer.innerHTML = `
-                    <h2>YAY!</h2>
+                    <h2>!YAY!</h2>
                     <p>I LOVE YOU!</p>
                 `;
             } 
-            // If they answered "No", ask if they like tea (second round question)
-            else if (response === 'no') {
+            // If they answered "No", ask if they like tea
+            else if (response === 'NO,FUCK YOU BITCH') {
                 questionContainer.innerHTML = `
                     <h2>PLEASEEEE BE MY VALENTINE</h2>
-                    <button class="btn" onclick="answerTea('yes')">Yes, you're cute</button>
-                    <button class="btn" onclick="answerTea('no')">No, sorry</button>
+                    <button class="btn" onclick="answerTea('FINE,ONLY CAUSE U CUTE')">Yes</button>
+                    <button class="btn" onclick="answerTea('I SAID NO ALREADY U BITCH')">No</button>
                 `;
             }
         }
@@ -81,14 +81,14 @@
         function answerTea(response) {
             const questionContainer = document.getElementById("question-container");
 
-            if (response === 'yes') {
+            if (response === 'FINE,ONLY CAUSE U CUTE') {
                 questionContainer.innerHTML = `
                     <h2>YAY!</h2>
                     <p>I KNEW YOU LOVED ME!</p>
                 `;
             } else {
                 questionContainer.innerHTML = `
-                    <h2>That's okay, I still love you!</h2>
+                    <h2>GO FUCK YOURSELF BITCH</h2>
                 `;
             }
         }
