@@ -1,10 +1,10 @@
-# tt
+# To My Girlfriend Kai Yi
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Do You Like Coffee?</title>
+    <title>Do you want to be my VALENTINE BB?</title>
     <style>
         body {
             background-color: #f8d0d6; /* Light pink background */
@@ -45,13 +45,13 @@
 
     <div class="container" id="question-container">
         <!-- Initial Question -->
-        <h2 id="question">Do you like coffee?</h2>
+        <h2 id="question">Do you want to be my VALENTINE BB??</h2>
 
         <!-- Yes Button -->
-        <button class="btn" onclick="answer('yes')">Yes</button>
+        <button class="btn" onclick="answer('YESSS OFC')">Yes</button>
 
         <!-- No Button -->
-        <button class="btn" onclick="answer('no')">No</button>
+        <button class="btn" onclick="answer('NO,FUCK YOU BITCH')">No</button>
     </div>
 
     <script>
@@ -63,31 +63,32 @@
             // If they answered "Yes", give a free coffee message
             if (response === 'yes') {
                 questionContainer.innerHTML = `
-                    <h2>Here is your free coffee! ☕</h2>
-                    <p>Enjoy your coffee!</p>
+                    <h2>!YAY!</h2>
+                    <p>I LOVE YOU!</p>
                 `;
             } 
             // If they answered "No", ask if they like tea
             else if (response === 'no') {
                 questionContainer.innerHTML = `
-                    <h2>Do you like tea?</h2>
-                    <button class="btn" onclick="answerTea('yes')">Yes</button>
-                    <button class="btn" onclick="answerTea('no')">No</button>
+                    <h2>PLEASEEEE BE MY VALENTINE</h2>
+                    <button class="btn" onclick="answerTea('FINE,ONLY CAUSE U CUTE')">Yes</button>
+                    <button class="btn" onclick="answerTea('I SAID NO ALREADY U BITCH')">No</button>
                 `;
             }
         }
 
-        // Function to handle the "Do you like tea?" question
+        // Function to handle the "PLEASEEEE BE MY VALENTINE" question
         function answerTea(response) {
             const questionContainer = document.getElementById("question-container");
 
             if (response === 'yes') {
                 questionContainer.innerHTML = `
-                    <h2>Thanks for your response! You like tea!</h2>
+                    <h2>YAY!</h2>
+                    <p>I KNEW YOU LOVED ME!</p>
                 `;
             } else {
                 questionContainer.innerHTML = `
-                    <h2>Thanks for your response! You don't like tea!</h2>
+                    <h2>GO FUCK YOURSELF BITCH</h2>
                 `;
             }
         }
