@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 ## To my Girlfriend Kai Yi
 <html lang="en">
 <head>
