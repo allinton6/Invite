@@ -1,4 +1,4 @@
-# To My Girlfriend Kai Yi
+## To my Girlfriend Kai yi
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,10 +48,10 @@
         <h2 id="question">Do you want to be my VALENTINE BB??</h2>
 
         <!-- Yes Button -->
-        <button class="btn" onclick="answer('YESSS OFC')">Yes</button>
+        <button class="btn" onclick="answer('yes')">Yes</button>
 
         <!-- No Button -->
-        <button class="btn" onclick="answer('NO,FUCK YOU BITCH')">No</button>
+        <button class="btn" onclick="answer('no')">No</button>
     </div>
 
     <script>
@@ -60,19 +60,19 @@
             // Access the question container and update it dynamically
             const questionContainer = document.getElementById("question-container");
 
-            // If they answered "Yes", give a free coffee message
+            // If they answered "Yes", display a loving message
             if (response === 'yes') {
                 questionContainer.innerHTML = `
-                    <h2>!YAY!</h2>
+                    <h2>YAY!</h2>
                     <p>I LOVE YOU!</p>
                 `;
             } 
-            // If they answered "No", ask if they like tea
+            // If they answered "No", ask if they like tea (second round question)
             else if (response === 'no') {
                 questionContainer.innerHTML = `
                     <h2>PLEASEEEE BE MY VALENTINE</h2>
-                    <button class="btn" onclick="answerTea('FINE,ONLY CAUSE U CUTE')">Yes</button>
-                    <button class="btn" onclick="answerTea('I SAID NO ALREADY U BITCH')">No</button>
+                    <button class="btn" onclick="answerTea('yes')">Yes, you're cute</button>
+                    <button class="btn" onclick="answerTea('no')">No, sorry</button>
                 `;
             }
         }
@@ -88,7 +88,7 @@
                 `;
             } else {
                 questionContainer.innerHTML = `
-                    <h2>GO FUCK YOURSELF BITCH</h2>
+                    <h2>That's okay, I still love you!</h2>
                 `;
             }
         }
