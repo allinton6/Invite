@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 ## To my Girlfriend Kai Yi
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -39,6 +39,22 @@
         .btn:hover {
             background-color: #ff5f78;
         }
+
+        /* Styling the back button */
+        .back-btn {
+            background-color: #c1c1c1;
+            color: black;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .back-btn:hover {
+            background-color: #9e9e9e;
+        }
     </style>
 </head>
 <body>
@@ -47,11 +63,14 @@
         <!-- Initial Question -->
         <h2 id="question">Do you want to be my VALENTINE BB??</h2>
 
-        <!-- YESSS OFC Button -->
-        <button class="btn" onclick="answer('YESSS OFC')">YESSS OFC</button>
+        <!-- Yes Button -->
+        <button class="btn" onclick="answer('YESSS OFC')">Yes, obviously!</button>
 
-        <!-- NO,FUCK YOU BITCH Button -->
-        <button class="btn" onclick="answer('NO,FUCK YOU BITCH')">NO,FUCK YOU BITCH</button>
+        <!-- No Button -->
+        <button class="btn" onclick="answer('NO,FUCK YOU BITCH')">No, fuck you!</button>
+
+        <!-- Back Button -->
+        <button class="back-btn" onclick="goBack()">Go Back</button>
     </div>
 
     <script>
@@ -60,19 +79,19 @@
             // Access the question container and update it dynamically
             const questionContainer = document.getElementById("question-container");
 
-            // If they answered "YESSS OFC"
+            // If they answered "Yes"
             if (response === 'YESSS OFC') {
                 questionContainer.innerHTML = `
                     <h2>!YAY!</h2>
                     <p>I LOVE YOU!</p>
                 `;
             } 
-            // If they answered "NO,FUCK YOU BITCH", ask if they like tea
+            // If they answered "No", ask if they like tea
             else if (response === 'NO,FUCK YOU BITCH') {
                 questionContainer.innerHTML = `
                     <h2>PLEASEEEE BE MY VALENTINE</h2>
-                    <button class="btn" onclick="answerTea('FINE,ONLY CAUSE U CUTE')">FINE,ONLY CAUSE U CUTE</button>
-                    <button class="btn" onclick="answerTea('I SAID NO ALREADY U BITCH')">I SAID NO ALREADY U BITCH</button>
+                    <button class="btn" onclick="answerTea('FINE,ONLY CAUSE U CUTE')">Fine, only cause you cute</button>
+                    <button class="btn" onclick="answerTea('I SAID NO ALREADY U BITCH')">No, I SAID NO ALREADY</button>
                 `;
             }
         }
@@ -91,6 +110,11 @@
                     <h2>GO FUCK YOURSELF BITCH</h2>
                 `;
             }
+        }
+
+        // Go back to the previous page
+        function goBack() {
+            window.history.back();
         }
     </script>
 
