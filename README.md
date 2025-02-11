@@ -47,10 +47,10 @@
         <!-- Initial Question -->
         <h2 id="question">Do you want to be my VALENTINE BB??</h2>
 
-        <!-- Yes Button -->
+        <!-- YESSS OFC Button -->
         <button class="btn" onclick="answer('YESSS OFC')">YESSS OFC</button>
 
-        <!-- No Button -->
+        <!-- NO,FUCK YOU BITCH Button -->
         <button class="btn" onclick="answer('NO,FUCK YOU BITCH')">NO,FUCK YOU BITCH</button>
     </div>
 
