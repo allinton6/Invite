@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yes or No Question</title>
+    <title>Do You Like Coffee?</title>
     <style>
-        /* Set the background color to light pink */
         body {
-            background-color: #f8d0d6;
+            background-color: #f8d0d6; /* Light pink background */
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
@@ -17,16 +16,15 @@
             margin: 0;
         }
 
-        /* Style the container for the question and buttons */
         .container {
             text-align: center;
             padding: 20px;
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
         }
 
-        /* Style the buttons */
         .btn {
             background-color: #ff87a2;
             color: white;
@@ -38,34 +36,62 @@
             font-size: 16px;
         }
 
-        /* Hover effect for buttons */
         .btn:hover {
             background-color: #ff5f78;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Display the Yes or No Question -->
-        <h2>Do you prefer using self-check-in kiosks over traditional check-in counters when traveling?</h2>
-        
+
+    <div class="container" id="question-container">
+        <!-- Initial Question -->
+        <h2 id="question">Do you like coffee?</h2>
+
         <!-- Yes Button -->
         <button class="btn" onclick="answer('yes')">Yes</button>
-        
+
         <!-- No Button -->
         <button class="btn" onclick="answer('no')">No</button>
     </div>
 
     <script>
-        // This function handles the button clicks
+        // Function to handle the user's answer
         function answer(response) {
-            // Depending on the answer, redirect to a different page with another question
-            if(response === 'yes') {
-                window.location.href = "page2_yes.html"; // Redirects to another page with a new question for 'Yes' answer
+            // Access the question container and update it dynamically
+            const questionContainer = document.getElementById("question-container");
+
+            // If they answered "Yes", give a free coffee message
+            if (response === 'yes') {
+                questionContainer.innerHTML = `
+                    <h2>Here is your free coffee! ☕</h2>
+                    <p>Enjoy your coffee!</p>
+                `;
+            } 
+            // If they answered "No", ask if they like tea
+            else if (response === 'no') {
+                questionContainer.innerHTML = `
+                    <h2>Do you like tea?</h2>
+                    <button class="btn" onclick="answerTea('yes')">Yes</button>
+                    <button class="btn" onclick="answerTea('no')">No</button>
+                `;
+            }
+        }
+
+        // Function to handle the "Do you like tea?" question
+        function answerTea(response) {
+            const questionContainer = document.getElementById("question-container");
+
+            if (response === 'yes') {
+                questionContainer.innerHTML = `
+                    <h2>Thanks for your response! You like tea!</h2>
+                `;
             } else {
-                window.location.href = "page2_no.html"; // Redirects to another page with a new question for 'No' answer
+                questionContainer.innerHTML = `
+                    <h2>Thanks for your response! You don't like tea!</h2>
+                `;
             }
         }
     </script>
+
 </body>
 </html>
